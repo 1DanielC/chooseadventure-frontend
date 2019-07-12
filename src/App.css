@@ -1,26 +1,69 @@
-.App {
-  text-align: center;
+:root {
+  --main-color: #282c34;
+  --secondary-color: #343b47;
+  --edge-color: #232830;
+  --highlight-color: #888;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: var(--main-color);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu {
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  background-color: #343b47;
+  box-shadow: 1px 1px 1px var(--edge-color);
+}
+
+.menuItem {
+  color: white;
+  text-decoration: none;
+  cursor: default;
+  height: 100%;
+  width: 125px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.menuItem:hover {
+  border-bottom: 2px solid var(--highlight-color);
+  padding-top: 2px;
+  color: lightgrey;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginInput {
+  display: flex;
+}
+
+.button {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--edge-color);
+  display: inline-block;
+  justify-content: center;
+  width: 75px;
+  height: 25px;
+  color:white;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.button:hover {
+  color: var(--highlight-color);
 }
 
 @keyframes App-logo-spin {
