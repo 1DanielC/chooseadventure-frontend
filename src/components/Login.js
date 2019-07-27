@@ -17,10 +17,11 @@ export default function Login() {
     const response = loginPost(apiUrl + loginSuffix, `username=${username}&password=${password}`)
       .then(response => {
         if (response.ok) {
-          setLoginMessage("Login Successful")
+          setLoginMessage("Login Successful");
           window.location = homePath;
         } else {
-          setLoginMessage("Login Failed")
+          setIsLoading(false);
+          setLoginMessage("Login Failed");
         }
       })
       .catch(error => {
@@ -40,8 +41,6 @@ export default function Login() {
         setPassword(val);
         break;
     }
-    console.log("Username: " + username);
-    console.log("Password: " + password);
   }
 
   return !isLoading ? (
