@@ -12,7 +12,9 @@ body {
 
 .menu {
   height: 50px;
+  width:100%;
   display: flex;
+  flex-direction: row;
   justify-content: left;
   align-items: center;
   text-align: center;
@@ -21,15 +23,19 @@ body {
 }
 
 .menuItem {
+  display: flex;
+  height: 100%;
+  width: 125px;
   color: white;
   text-decoration: none;
   cursor: default;
-  height: 100%;
-  width: 125px;
-  display:flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.rightItem {
+  margin-left: auto;
 }
 
 .menuItem:hover {

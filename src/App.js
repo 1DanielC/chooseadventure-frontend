@@ -6,20 +6,20 @@ import Logout from "./components/Logout";
 import Home from "./components/Home";
 import * as pathConstants from "./utils/constants/PathConstants";
 import React, {useState, userReducer} from "react";
+
 function App() {
+    return (
+        <Router>
+            <div>
+                <Menu/>
+                <Route path={pathConstants.loginPath} component={Login}/>
+                <Route path={pathConstants.homePath} component={Home}/>
+                <Route path={pathConstants.logoutPath} component={Logout}/>
+                <Route path={pathConstants.profilePath} component={Home}/>
 
-
-
-  return (
-    <Router>
-      <div>
-        <Menu/>
-        <Route path={pathConstants.loginPath} component={Login} />
-        <Route path={pathConstants.homePath} component={Home} />
-        <Route path={pathConstants.logoutPath} component={Logout} />
-      </div>
-    </Router>
-  );
+            </div>
+        </Router>
+    );
 }
 
 export default App;
