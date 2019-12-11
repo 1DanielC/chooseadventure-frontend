@@ -1,99 +1,37 @@
-:root {
-  --main-color: #282c34;
-  --secondary-color: #343b47;
-  --edge-color: #232830;
-  --highlight-color: #888;
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Mono'), url("styles/ubuntumono.woff2") format('woff2');
 }
 
 body {
-  background-color: var(--main-color);
-  color: white;
+  background-color: black;
+  color: rgb(0,255,0);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 18px;
+  padding: 0 10px;
 }
 
-.menu {
-  height: 50px;
-  width:100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  text-align: center;
-  background-color: #343b47;
-  box-shadow: 1px 1px 1px var(--edge-color);
+input[type=text]{
+  background-color: black;
+  color: rgb(0,255,0);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 18px;
+
 }
 
-.menuItem {
-  display: flex;
-  height: 100%;
-  width: 125px;
-  color: white;
-  text-decoration: none;
-  cursor: default;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+input{
+  outline: none;
+  border:none;
+  width: 90%;
+  line-height: 40px;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
-.rightItem {
-  margin-left: auto;
+.error {
+  padding: 10px 0px;
 }
-
-.menuItem:hover {
-  border-bottom: 2px solid var(--highlight-color);
-  padding-top: 2px;
-  color: lightgrey;
-}
-
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.loginInput {
-  display: flex;
-}
-
-.button {
-  background-color: var(--secondary-color);
-  border: 1px solid var(--edge-color);
-  display: inline-block;
-  justify-content: center;
-  width: 75px;
-  height: 25px;
-  color:white;
-  border-radius: 3px;
-  margin-top: 5px;
-}
-
-.button:hover {
-  color: var(--highlight-color);
-}
-
-.image {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content:center;
-  align-items: center;
-  text-align: center;
-}
-.imageNotHovered, .image:hover .imageHovered {
-  display: flex;
-}
-
-.imageHovered, .image:hover .imageNotHovered {
-  display: none;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.root{
+  margin-top: 10px;
 }

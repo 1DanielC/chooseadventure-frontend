@@ -15,7 +15,7 @@ export const post = (url, body) => {
     method: "POST",
     credentials: "include",
     headers: {
-        'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Allow-Credentials': 'true',
       'Content-Type': 'application/json',
     },
     body: body
